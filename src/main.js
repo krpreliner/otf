@@ -4,59 +4,19 @@ import { academyImages } from './data/academyImages';
 document.addEventListener('DOMContentLoaded', () => {
   // Hamburger Menu Logic
   const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
-  if (hamburger && navMenu) {
+  const desktopNav = document.querySelector('.desktop-nav');
+  
+  if (hamburger && desktopNav) {
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navMenu.classList.toggle('active');
+      // Toggle a mobile-active class that we will add to CSS
+      desktopNav.classList.toggle('mobile-active');
     });
 
-    document.querySelectorAll('#nav-menu a').forEach(link => {
+    document.querySelectorAll('.desktop-nav a').forEach(link => {
       link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+        desktopNav.classList.remove('mobile-active');
       });
     });
-  }
-
-  // 1. Inject Images from Config
-  const heroBg = document.getElementById('hero-bg');
-  if (heroBg) {
-    heroBg.style.backgroundImage = "url('/assets/hero_ai.png')";
-  }
-
-  const aboutImg = document.getElementById('about-img');
-  if (aboutImg && academyImages.aboutAcademy) {
-    aboutImg.src = academyImages.aboutAcademy;
-  }
-
-  const kidsImg1 = document.getElementById('kids-img-1');
-  const kidsImg2 = document.getElementById('kids-img-2');
-  const kidsImg3 = document.getElementById('kids-img-3');
-  
-  if (kidsImg1 && academyImages.kidsTraining[0]) kidsImg1.src = academyImages.kidsTraining[0];
-  if (kidsImg2 && academyImages.kidsTraining[1]) kidsImg2.src = academyImages.kidsTraining[1];
-  if (kidsImg3 && academyImages.kidsTraining[2]) kidsImg3.src = academyImages.kidsTraining[2];
-
-  const achievementsMain = document.getElementById('achievements-main-img');
-  if (achievementsMain && academyImages.achievements.main) {
-    achievementsMain.src = academyImages.achievements.main;
-  }
-
-  const achievementsGallery = document.getElementById('achievements-gallery-container');
-  if (achievementsGallery && academyImages.achievements.gallery) {
-    academyImages.achievements.gallery.forEach(src => {
-      const img = document.createElement('img');
-      img.src = src;
-      img.alt = "Achievement";
-      img.loading = "lazy";
-      achievementsGallery.appendChild(img);
-    });
-  }
-
-  const femalesBg = document.getElementById('females-img-bg');
-  if (femalesBg && academyImages.femaleTraining) {
-    femalesBg.style.backgroundImage = `url('${academyImages.femaleTraining}')`;
   }
 
   // 2. Render Masonry Gallery
@@ -111,21 +71,21 @@ document.addEventListener('DOMContentLoaded', () => {
     galleryItems.forEach(item => {
       item.addEventListener('click', () => {
         lightboxImg.src = item.dataset.src;
-        lightbox.classList.add('active');
+        lightbox.style.display = 'flex';
       });
     });
   }
 
   if (lightboxClose) {
     lightboxClose.addEventListener('click', () => {
-      lightbox.classList.remove('active');
+      lightbox.style.display = 'none';
     });
   }
 
   if (lightbox) {
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) {
-        lightbox.classList.remove('active');
+        lightbox.style.display = 'none';
       }
     });
   }
@@ -154,9 +114,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 7. Scroll Reveal Animation (Intersection Observer)
-  const fadeElements = document.querySelectorAll('.fade-in');
+  const fadeElements = document.querySelectorAll('.fade-up');
   const observerOptions = {
-    threshold: 0.15,
+    threshold: 0.1,
     rootMargin: "0px 0px -50px 0px"
   };
 

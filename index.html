@@ -1,382 +1,298 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OTF Academy - Olympic Taekwondo & Fitness Gaya</title>
-    <meta name="description" content="Professional Taekwondo, Fitness, Boxing, and Self-Defence training in Gaya. Join OTF Academy for Kids Taekwondo and Females Special Batch." />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SportsActivityLocation",
-      "name": "OTF Academy",
-      "alternateName": "Olympic Taekwondo & Fitness Academy",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2nd Floor, Katari Hill Road, Opposite Anugrah Narayan Memorial College, Old Kareem Ganj",
-        "addressLocality": "Gaya",
-        "addressRegion": "Bihar",
-        "postalCode": "823001",
-        "addressCountry": "IN"
-      },
-      "telephone": "+91 7260951073",
-      "areaServed": "Gaya, Bihar",
-      "description": "Professional Martial Arts School in Gaya offering Taekwondo, Boxing, and Fitness Training."
-    }
-    </script>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>OTF Academy | Professional Combat Fitness</title>
+    <meta name="description" content="Gaya's premium combat and strength training academy. Build discipline, fitness, and confidence with OTF Academy." />
   </head>
   <body>
-    <!-- Navbar -->
-    <header class="navbar">
-      <div class="logo">
-        <span class="highlight">OTF</span> ACADEMY
+    <!-- 1. Header / Navigation -->
+    <header class="site-header">
+      <div class="container header-container">
+        <a href="#" class="logo">OTF<span>.</span></a>
+        
+        <nav class="desktop-nav">
+          <a href="#programs">Programs</a>
+          <a href="#females">Special Batch</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#location">Location</a>
+        </nav>
+
+        <a href="#demo" class="btn btn-primary header-cta">FREE DEMO</a>
+        
+        <button class="mobile-menu-btn" id="hamburger">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
       </div>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav id="nav-menu">
-        <a href="#about">About</a>
-        <a href="#kids">Kids</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#females">Females Batch</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#location">Location</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a href="https://www.instagram.com/weotfacademy?igsh=OGVxczBtMmdycXBy" target="_blank" class="nav-cta">Follow Us</a>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <div id="hero-bg" class="hero-bg-image"></div>
+    <!-- 2. Hero Section -->
+    <section id="hero" class="hero-section">
+      <img src="/assets/otf/insta_1.jpg" alt="OTF Academy Training" class="hero-bg" id="hero-main-img" />
       <div class="hero-overlay"></div>
-      <div class="container hero-content-center">
-        <div class="badge-wrapper">
-          <span class="trust-badge glow">GAYA'S PREMIER MARTIAL ARTS ACADEMY</span>
+      
+      <div class="container hero-content fade-up">
+        <div class="hero-location">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Gaya, Bihar
         </div>
-        <h1>DISCIPLINE.<br/>STRENGTH.<br/><span class="highlight">CONFIDENCE.</span></h1>
-        <p class="hero-subtitle">Transform your body and mind with Olympic standard Taekwondo and Fitness training.</p>
-        <div class="hero-actions center">
-          <a href="#contact" class="btn btn-primary btn-glow">BOOK FREE DEMO</a>
-          <a href="#about" class="btn btn-secondary">Discover OTF</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about fade-in">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-text">
-            <span class="trust-label">REAL TRAINING • REAL STUDENTS • GAYA</span>
-            <h2>Train With The Best In Gaya</h2>
-            <p>Welcome to OTF Academy. We are a professional martial arts and fitness academy dedicated to building strong bodies, sharp minds, and confident individuals through authentic Taekwondo and fitness training.</p>
-            <p>Our focus is on real progress, discipline, and community.</p>
-          </div>
-          <div class="about-image-wrapper img-hover-zoom glass-border">
-            <img id="about-img" alt="OTF Academy Training Floor" />
-          </div>
+        <h1 class="text-display-xl">TRAIN HARD.<br/>FIGHT SMART.<br/><span class="text-primary">LIVE STRONG.</span></h1>
+        <p class="hero-desc">Experience professional combat fitness and elite strength training designed to build champions.</p>
+        
+        <div class="hero-actions">
+          <a href="#demo" class="btn btn-primary">BOOK 3 DAYS FREE DEMO</a>
+          <a href="#programs" class="btn btn-outline">EXPLORE TRAINING</a>
         </div>
       </div>
     </section>
 
-    <!-- Kids Taekwondo Section -->
-    <section id="kids" class="kids fade-in">
-      <div class="container">
-        <div class="kids-grid">
-          <div class="kids-images">
-            <div class="kids-img-main img-hover-zoom glass-border">
-              <img id="kids-img-1" alt="Kids Taekwondo Training Main" />
-            </div>
-            <div class="kids-img-secondary">
-              <div class="img-hover-zoom glass-border"><img id="kids-img-2" alt="Kids Taekwondo Training 2" /></div>
-              <div class="img-hover-zoom glass-border"><img id="kids-img-3" alt="Kids Taekwondo Training 3" /></div>
-            </div>
-          </div>
-          <div class="kids-text">
-            <span class="section-label">FOR PARENTS</span>
-            <h2>STRONG BODY.<br/>SHARP MIND.<br/><span class="highlight">CONFIDENT CHILD.</span></h2>
-            <p>Help your child develop discipline, confidence, focus and physical fitness through professional Taekwondo training.</p>
-            <ul class="benefits-list">
-              <li>Discipline</li>
-              <li>Confidence</li>
-              <li>Focus</li>
-              <li>Fitness</li>
-              <li>Self-Defence</li>
-              <li>Team Spirit</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary btn-glow">BOOK 3 DAYS FREE DEMO</a>
-          </div>
+    <!-- 3. Trust Strip -->
+    <section class="trust-strip fade-up">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <span>🏆</span>
+          <h4>Professional Training</h4>
+        </div>
+        <div class="trust-item">
+          <span>🥊</span>
+          <h4>Combat Disciplines</h4>
+        </div>
+        <div class="trust-item">
+          <span>💪</span>
+          <h4>Fitness & Strength</h4>
+        </div>
+        <div class="trust-item">
+          <span>🤝</span>
+          <h4>Beginner Friendly</h4>
         </div>
       </div>
     </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements fade-in">
+    <!-- 4. Training Programs -->
+    <section id="programs" class="programs-section">
       <div class="container">
-        <div class="achievements-top">
-          <div class="achievement-featured img-hover-zoom glass-border">
-            <img id="achievements-main-img" alt="OTF Academy Achievement" />
-          </div>
-          <div class="achievement-text">
-            <span class="section-label">TEAM OTF</span>
-            <h2>TRAINING THAT BUILDS CHAMPIONS.</h2>
-            <p class="editorial-text">Every achievement begins with discipline, consistency and the courage to keep improving.</p>
-          </div>
-        </div>
-        <div class="achievements-gallery" id="achievements-gallery-container">
-          <!-- Populated by JS -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Females Special Batch Section -->
-    <section id="females" class="females-batch fade-in">
-      <div class="container">
-        <div class="females-grid">
-          <div class="females-text">
-            <span class="section-label">GAYA JI — FEMALES SPECIAL BATCH</span>
-            <h2>FITNESS.<br/>SELF-DEFENCE.<br/><span class="highlight long-word">CONFIDENCE.</span></h2>
-            <div class="training-categories">
-              <span class="tag tag-glow">Taekwondo</span>
-              <span class="tag tag-glow">Boxing</span>
-              <span class="tag tag-glow">Kickboxing</span>
-              <span class="tag tag-glow">Weight Loss</span>
-              <span class="tag tag-glow">Strength Training</span>
-            </div>
-            <div class="offer-box glass-panel">
-              <h3>3 DAYS FREE DEMO</h3>
-              <p class="location-text">📍 Anugrah Memorial College Gate 1 ke saamne, Gaya</p>
-              <p class="phone-text">📞 7260951073</p>
-            </div>
-          </div>
-          <div class="females-image-wrapper img-hover-zoom glass-border">
-            <!-- Background will be set via JS, fallback to premium abstract if missing -->
-            <div id="females-img-bg" class="females-bg"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Instagram Training Gallery -->
-    <section id="gallery" class="gallery-section fade-in">
-      <div class="container">
-        <div class="section-header center">
-          <h2>INSIDE OTF ACADEMY</h2>
-          <p>See how we train, grow and become stronger together.</p>
+        <div class="section-header fade-up">
+          <h2 class="text-display-lg">TRAINING THAT<br/><span class="text-primary">BUILDS CHAMPIONS.</span></h2>
         </div>
         
-        <div class="gallery-filters" id="gallery-filters">
-          <button class="filter-btn active" data-filter="ALL">ALL</button>
-          <button class="filter-btn" data-filter="KIDS">KIDS</button>
-          <button class="filter-btn" data-filter="TRAINING">TRAINING</button>
-          <button class="filter-btn" data-filter="TEAM OTF">TEAM OTF</button>
-          <button class="filter-btn" data-filter="ACHIEVEMENTS">ACHIEVEMENTS</button>
-        </div>
-
-        <div class="masonry-gallery" id="masonry-gallery">
-          <!-- Populated by JS -->
-        </div>
-
-        <div class="gallery-cta center">
-          <p class="cta-text">FOLLOW OUR TRAINING JOURNEY</p>
-          <a href="https://www.instagram.com/weotfacademy?igsh=OGVxczBtMmdycXBy" target="_blank" class="btn btn-primary btn-insta">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            FOLLOW @WEOTFACADEMY
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Enquiry Form Section (NEW) -->
-    <section id="contact" class="enquiry-section fade-in">
-      <div class="container">
-        <div class="enquiry-grid glass-panel">
-          <div class="enquiry-info">
-            <span class="section-label">START YOUR JOURNEY</span>
-            <h2>Book Your 3-Day <span class="highlight text-glow">Free Demo</span></h2>
-            <p>Ready to transform your fitness and confidence? Fill out the form, and our team will get back to you immediately to schedule your first session.</p>
-            <div class="contact-details">
-              <div class="contact-item">
-                <span class="icon">📍</span>
-                <div>
-                  <strong>Address</strong>
-                  <p>Anugrah Memorial College Gate 1 ke saamne, Gaya, Bihar</p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <span class="icon">📞</span>
-                <div>
-                  <strong>Phone</strong>
-                  <p>+91 7260951073</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="enquiry-form-wrapper">
-            <form id="demo-form" class="demo-form">
-              <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" required placeholder="Enter your name">
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" required placeholder="+91">
-              </div>
-              <div class="form-group">
-                <label for="program">Interested In</label>
-                <select id="program" required>
-                  <option value="" disabled selected>Select a program</option>
-                  <option value="Kids Taekwondo">Kids Taekwondo</option>
-                  <option value="Females Special Batch">Females Special Batch</option>
-                  <option value="Adults Training">Adults Training (General)</option>
-                  <option value="Boxing/Kickboxing">Boxing & Kickboxing</option>
-                  <option value="Weight Loss">Weight Loss & Fitness</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="message">Message (Optional)</label>
-                <textarea id="message" rows="3" placeholder="Tell us a bit about your goals..."></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-glow full-width">REQUEST FREE DEMO</button>
-              <div id="form-success" class="form-success-msg hidden">
-                ✅ Request sent successfully! We will contact you soon.
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Instagram Social Proof Section -->
-    <section id="social-proof" class="social-proof fade-in">
-      <div class="container flex-center">
-        <div class="insta-card glass-panel floating">
-          <div class="insta-header">
-            <div class="insta-avatar">
-              <img src="/assets/otf/insta_5.jpg" alt="OTF Academy Logo" id="insta-logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'50\' height=\'50\'><rect width=\'50\' height=\'50\' fill=\'%231a2942\'/></svg>'"/>
-            </div>
-            <div class="insta-info">
-              <h3>weotfacademy <span class="verified-badge">✓</span></h3>
-              <p>OTF Academy</p>
-            </div>
-          </div>
-          <div class="insta-bio">
-            <p>Olympic Taekwondo & Fitness Academy</p>
-            <p>Gaya, Bihar</p>
-            <p><strong>Training. Discipline. Confidence.</strong></p>
-          </div>
-          <div class="insta-action">
-            <a href="https://www.instagram.com/weotfacademy?igsh=OGVxczBtMmdycXBy" target="_blank" class="btn btn-primary full-width">VIEW INSTAGRAM</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Location Section (NEW) -->
-    <section id="location" class="location-section fade-in">
-      <div class="container">
-        <div class="section-header center">
-          <span class="section-label">VISIT OUR ACADEMY</span>
-          <h2>FIND YOUR WAY TO OTF</h2>
-          <p>Your journey towards strength, discipline and confidence starts here.</p>
-        </div>
-        
-        <div class="location-grid">
-          <div class="location-card glass-panel">
-            <h3>OTF ACADEMY</h3>
-            <p class="location-subtitle">Olympic Taekwondo & Fitness Academy</p>
-            
-            <div class="address-block">
-              <strong>Address:</strong>
-              <p>2nd Floor, Katari Hill Road,<br/>
-              Opposite Anugrah Narayan Memorial College,<br/>
-              Old Kareem Ganj,<br/>
-              Gaya, Bihar 823001</p>
-            </div>
-            
-            <div class="landmark-card">
-              <span class="badge">LANDMARK</span>
-              <p>Opposite Anugrah Narayan Memorial College</p>
-            </div>
-            
-            <div class="phone-block">
-              <span class="icon">📞</span>
-              <strong>+91 72609 51073</strong>
-            </div>
-            
-            <p class="trust-line">Professional Taekwondo & Fitness Training in Gaya</p>
-            
-            <div class="location-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&destination=OTF+Academy,+Katari+Hill+Road,+Gaya,+Bihar+823001" target="_blank" class="btn btn-primary btn-glow full-width">📍 GET DIRECTIONS</a>
-              <div class="action-row">
-                <a href="tel:+917260951073" class="btn btn-secondary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> CALL NOW</a>
-                <a href="https://wa.me/917260951073?text=Hello%20OTF%20Academy%2C%20I%20am%20interested%20in%20your%20training%20programs%20and%203%20Days%20Free%20Demo.%20Please%20share%20more%20details." target="_blank" class="btn btn-whatsapp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WHATSAPP</a>
-              </div>
+        <div class="programs-grid">
+          <div class="program-card fade-up">
+            <img src="/assets/otf/insta_2.jpg" alt="Taekwondo" class="program-img" />
+            <div class="program-content">
+              <h3>Taekwondo</h3>
+              <p class="text-body">Master speed, agility, and elite kicking techniques.</p>
             </div>
           </div>
           
-          <div class="map-wrapper glass-border">
-            <div class="map-badge">📍 OTF ACADEMY • GAYA</div>
-            <iframe
-              src="https://maps.google.com/maps?q=OTF%20Academy,%20Katari%20Hill%20Road,%20Gaya,%20Bihar%20823001&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              width="100%"
-              height="100%"
-              style="border: 0;"
-              allowfullscreen
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="OTF Academy Gaya Location"
-            ></iframe>
-            <div class="map-footer">
-              <p>Located opposite Anugrah Narayan Memorial College, Katari Hill Road, Gaya.</p>
-              <a href="https://www.google.com/maps/dir/?api=1&destination=OTF+Academy,+Katari+Hill+Road,+Gaya,+Bihar+823001" target="_blank">Open in Google Maps →</a>
+          <div class="program-card fade-up">
+            <img src="/assets/otf/insta_3.jpg" alt="Boxing" class="program-img" />
+            <div class="program-content">
+              <h3>Boxing</h3>
+              <p class="text-body">Develop striking power, head movement, and endurance.</p>
+            </div>
+          </div>
+
+          <div class="program-card fade-up">
+            <img src="/assets/otf/insta_4.jpg" alt="Kickboxing" class="program-img" />
+            <div class="program-content">
+              <h3>Kickboxing</h3>
+              <p class="text-body">High-intensity full body combat conditioning.</p>
+            </div>
+          </div>
+          
+          <div class="program-card fade-up">
+            <img src="/assets/otf/insta_5.jpg" alt="Strength Training" class="program-img" />
+            <div class="program-content">
+              <h3>Strength Training</h3>
+              <p class="text-body">Build foundational muscle and athletic power.</p>
+            </div>
+          </div>
+
+          <div class="program-card fade-up">
+            <img src="/assets/otf/insta_6.jpg" alt="Weight Loss" class="program-img" />
+            <div class="program-content">
+              <h3>Weight Loss</h3>
+              <p class="text-body">Burn fat and transform your physique with combat cardio.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container footer-content">
-        <div class="footer-brand">
-          <h2>OTF ACADEMY</h2>
-          <p>Gaya's Premier Martial Arts Academy</p>
+    <!-- 5. Why OTF Academy -->
+    <section class="why-otf-section">
+      <div class="container why-grid">
+        <div class="why-content fade-up">
+          <h2 class="text-display-lg">MORE THAN<br/>A WORKOUT.</h2>
+          <p class="text-body" style="font-size: 1.5rem; margin-bottom: 2rem; color: #fff;">
+            BUILD DISCIPLINE.<br/>BUILD CONFIDENCE.
+          </p>
+          <p class="text-body">
+            At OTF Academy, we don't just train your body; we forge your mindset. Consistent training in a disciplined environment guarantees growth, strength, and unwavering self-defence capability.
+          </p>
         </div>
-        <div class="footer-contact">
-          <p>📍 Anugrah Memorial College Gate 1 ke saamne, Gaya</p>
-          <p>📞 +91 7260951073</p>
+        <div class="why-image-wrapper fade-up">
+          <img src="/assets/otf/insta_7.jpg" alt="Training Focus" class="why-image" />
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 OTF Academy. All rights reserved.</p>
+    </section>
+
+    <!-- 6. Females Special Batch (REBUILT) -->
+    <section id="females" class="females-section">
+      <div class="container females-grid">
+        <div class="females-text fade-up">
+          <span class="females-eyebrow">GAYA JI — FEMALES SPECIAL BATCH</span>
+          <h2 class="text-display-xl">FITNESS.<br/>SELF-DEFENCE.<br/><span class="word-confidence">CONFIDENCE.</span></h2>
+          <p class="text-body" style="margin-bottom: 2rem;">
+            A dedicated training environment focused entirely on empowering women through combat sports, practical self-defence, and intense physical conditioning.
+          </p>
+        </div>
+        <div class="females-visual fade-up">
+          <img src="/assets/otf/insta_8.jpg" alt="Females Special Batch" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Free Demo CTA -->
+    <section id="demo" class="demo-cta-section fade-up">
+      <div class="container">
+        <div class="demo-card">
+          <h2 class="text-section-title">3 DAYS FREE DEMO</h2>
+          <div class="demo-contact-info">
+            <p>📍 Anugrah Memorial College Gate 1 ke saamne, Gaya</p>
+            <p>📞 7260951073</p>
+          </div>
+          <div class="demo-actions">
+            <a href="tel:+917260951073" class="btn btn-primary">CALL NOW</a>
+            <a href="https://wa.me/917260951073" target="_blank" class="btn btn-outline">WHATSAPP US</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Inside OTF Academy (Gallery) -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <div class="section-header center fade-up" style="text-align: center;">
+          <h2 class="text-display-lg">INSIDE<br/>OTF ACADEMY.</h2>
+        </div>
+        
+        <div class="masonry-grid" id="masonry-gallery">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Training Experience -->
+    <section class="experience-section">
+      <div class="container">
+        <div class="experience-content fade-up">
+          <h2 class="text-section-title" style="margin-bottom: 1.5rem;">TECHNIQUE. FITNESS. DISCIPLINE.</h2>
+          <p class="text-body">
+            Our training philosophy is rooted in technical mastery and relentless conditioning. Whether you're here to compete or to conquer your own limits, OTF Academy provides the professional atmosphere you need.
+          </p>
+        </div>
+        <div class="fade-up">
+          <img src="/assets/otf/insta_9.jpg" alt="Training Philosophy" class="experience-img" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Location -->
+    <section id="location" class="location-section">
+      <div class="container">
+        <div class="section-header fade-up text-center" style="text-align: center;">
+          <h2 class="text-display-lg">TRAIN WITH US<br/>IN GAYA.</h2>
+          <p class="text-body" style="margin-top: 1rem;">OTF Academy, Katari Hill Road, Gaya, Bihar 823001</p>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=OTF+Academy,+Katari+Hill+Road,+Gaya,+Bihar+823001" target="_blank" class="btn btn-primary" style="margin-top: 2rem;">GET DIRECTIONS</a>
+        </div>
+        <div class="map-container fade-up">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.331206155556!2d84.99622997607736!3d24.78018654854581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32b0051dffdb1%3A0x6bba847cbebe4f8e!2sOTF%20Academy!5e0!3m2!1sen!2sin!4v1707000000000!5m2!1sen!2sin" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Final CTA -->
+    <section class="final-cta-section">
+      <img src="/assets/otf/insta_10.jpg" alt="Join OTF" class="final-cta-bg" />
+      <div class="final-cta-overlay"></div>
+      <div class="container final-cta-content fade-up">
+        <h2 class="text-display-lg" style="margin-bottom: 1.5rem;">YOUR FIRST<br/><span class="text-primary">3 DAYS ARE ON US.</span></h2>
+        <p class="text-body" style="margin-bottom: 3rem; color: #fff; font-size: 1.25rem;">Start your training journey with OTF Academy.</p>
+        <a href="#demo" class="btn btn-primary">BOOK FREE DEMO</a>
+      </div>
+    </section>
+
+    <!-- 12. Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="#" class="logo" style="display: block; margin-bottom: 1rem; color: #fff;">OTF<span class="text-primary">.</span></a>
+            <p class="text-body">Professional combat fitness and strength training academy.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Programs</h4>
+            <ul>
+              <li><a href="#programs">Taekwondo</a></li>
+              <li><a href="#programs">Boxing</a></li>
+              <li><a href="#programs">Kickboxing</a></li>
+              <li><a href="#programs">Strength Training</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Academy</h4>
+            <ul>
+              <li><a href="#females">Special Batch</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#location">Location</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li class="text-body">📍 Katari Hill Road, Gaya</li>
+              <li class="text-body">📞 +91 7260951073</li>
+              <li><a href="https://instagram.com/otf_academy" target="_blank">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2026 OTF Academy. All rights reserved.
+        </div>
       </div>
     </footer>
 
+    <!-- Mobile Action Bar -->
+    <div class="mobile-action-bar">
+      <a href="tel:+917260951073" class="action-btn call">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        Call
+      </a>
+      <a href="https://wa.me/917260951073" target="_blank" class="action-btn whatsapp">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=OTF+Academy,+Katari+Hill+Road,+Gaya,+Bihar+823001" target="_blank" class="action-btn directions">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+        Directions
+      </a>
+    </div>
+
     <!-- Lightbox -->
-    <div id="lightbox" class="lightbox">
-      <span class="lightbox-close">&times;</span>
-      <img id="lightbox-img" class="lightbox-content" />
+    <div id="lightbox" class="lightbox" style="display:none; position:fixed; z-index:9999; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); align-items:center; justify-content:center;">
+      <span class="lightbox-close" style="position:absolute; top:20px; right:30px; font-size:40px; color:#fff; cursor:pointer;">&times;</span>
+      <img id="lightbox-img" style="max-width:90%; max-height:90vh; object-fit:contain;" />
     </div>
-
-    <!-- Mobile Sticky Action Bar -->
-    <div class="mobile-sticky-bar">
-      <a href="tel:+917260951073" class="sticky-btn call"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> CALL</a>
-      <a href="https://wa.me/917260951073?text=Hello%20OTF%20Academy%2C%20I%20am%20interested%20in%20your%20training%20programs%20and%203%20Days%20Free%20Demo.%20Please%20share%20more%20details." target="_blank" class="sticky-btn whatsapp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WHATSAPP</a>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=OTF+Academy,+Katari+Hill+Road,+Gaya,+Bihar+823001" target="_blank" class="sticky-btn directions"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> DIRECTIONS</a>
-    </div>
-
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/917260951073?text=Hello%20OTF%20Academy%2C%20I%20am%20interested%20in%20your%20training%20programs%20and%203%20Days%20Free%20Demo.%20Please%20share%20more%20details." target="_blank" class="whatsapp-float">
-      <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    </a>
 
     <script type="module" src="/src/main.js"></script>
   </body>
