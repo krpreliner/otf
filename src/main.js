@@ -2,10 +2,27 @@ import './style.css';
 import { academyImages } from './data/academyImages';
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Hamburger Menu Logic
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  }
+
   // 1. Inject Images from Config
   const heroImg = document.getElementById('hero-img');
-  if (heroImg && academyImages.heroTraining) {
-    heroImg.src = academyImages.heroTraining;
+  if (heroImg) {
+    heroImg.src = '/assets/hero_ai.png';
   }
 
   const aboutImg = document.getElementById('about-img');
