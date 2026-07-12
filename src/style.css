@@ -587,8 +587,14 @@ section {
 }
 
 .females-text h2 {
-  font-size: 3.8rem;
+  font-size: clamp(2.5rem, 8vw, 3.8rem);
+  line-height: 1.1;
   margin-bottom: 2rem;
+  word-wrap: break-word;
+}
+.females-text h2 .long-word {
+  display: inline-block;
+  font-size: clamp(2.2rem, 11.5vw, 3.8rem);
 }
 
 .training-categories {
@@ -1230,9 +1236,15 @@ footer {
 
 @media (max-width: 992px) {
   .hero h1 { font-size: 3.5rem; }
-  .hero-grid, .about-grid, .kids-grid, .females-grid, .achievements-top {
+  .hero-grid, .about-grid, .kids-grid, .achievements-top {
     grid-template-columns: 1fr;
     gap: 4rem;
+  }
+  .females-grid {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 4rem;
+    text-align: center;
   }
   .hero-content { text-align: center; }
   .hero p.hero-subtitle { margin-left: auto; margin-right: auto; }
@@ -1244,6 +1256,7 @@ footer {
   .achievements-gallery { grid-template-columns: repeat(2, 1fr); }
   .achievements-gallery .gallery-item:nth-child(3) { grid-column: 1 / -1; }
   .map-wrapper { height: 450px; }
+  .training-categories { justify-content: center; }
 }
 
 @media (max-width: 768px) {
