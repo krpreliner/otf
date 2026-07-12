@@ -576,6 +576,7 @@ section {
 /* Females Batch Section */
 .females-batch {
   background: var(--color-surface);
+  padding-bottom: 2rem !important; /* Eliminate excessive black space */
 }
 
 .females-grid {
@@ -645,7 +646,8 @@ section {
 
 /* Gallery Section */
 .gallery-section {
-  background: var(--color-bg);
+  background: linear-gradient(to bottom, var(--color-surface) 0%, var(--color-bg) 100px, var(--color-bg) 100%);
+  padding-top: 2rem !important; /* Start naturally immediately after females section */
 }
 
 .section-header h2 {
