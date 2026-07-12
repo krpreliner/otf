@@ -13,6 +13,11 @@
   --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,7 +30,9 @@ body {
   color: var(--color-text-main);
   line-height: 1.6;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4 {
@@ -1274,6 +1281,8 @@ footer {
 
   /* Section padding */
   section { padding: 4rem 0; }
+  .social-proof { padding: 3rem 0; }
+  footer { padding: 3rem 0 2rem; }
   
   /* Image scaling */
   .kids-images { height: auto; display: flex; flex-direction: column; gap: 1rem; }
