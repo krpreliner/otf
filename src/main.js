@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 1. Inject Images from Config
-  const heroImg = document.getElementById('hero-img');
-  if (heroImg) {
-    heroImg.src = '/assets/hero_ai.png';
+  const heroBg = document.getElementById('hero-bg');
+  if (heroBg) {
+    heroBg.style.backgroundImage = "url('/assets/hero_ai.png')";
   }
 
   const aboutImg = document.getElementById('about-img');

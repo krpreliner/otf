@@ -266,43 +266,48 @@ a {
   box-shadow: 0 0 15px rgba(245, 185, 39, 0.4);
 }
 
-/* Hero Section */
+/* Hero Section (Cinematic Full Screen) */
 .hero {
   position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: #050810;
-  padding-top: 100px;
-  padding-bottom: 4rem;
+  padding-top: 80px;
   overflow: hidden;
 }
 
-.hero-background-effects {
+.hero-bg-image {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: 
-    radial-gradient(circle at 70% 30%, rgba(245, 185, 39, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 30% 70%, rgba(220, 38, 38, 0.1) 0%, transparent 50%),
-    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
-  background-position: center center;
+  background-size: cover;
+  background-position: center;
   z-index: 0;
-  pointer-events: none;
+  transform: scale(1.05);
+  animation: slowZoom 20s ease-in-out infinite alternate;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  align-items: center;
-  gap: 5rem;
+@keyframes slowZoom {
+  from { transform: scale(1.05); }
+  to { transform: scale(1.15); }
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle at center, rgba(5,8,16,0.3) 0%, rgba(5,8,16,0.95) 100%), linear-gradient(to bottom, rgba(5,8,16,0.2) 0%, #050810 100%);
+  z-index: 1;
+}
+
+.hero-content-center {
   position: relative;
   z-index: 10;
-}
-
-.hero-content {
-  text-align: left;
+  text-align: center;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .badge-wrapper {
@@ -322,7 +327,7 @@ a {
 }
 
 .hero h1 {
-  font-size: 4.5rem;
+  font-size: 5rem;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
   line-height: 1.1;
@@ -352,86 +357,18 @@ a {
 
 .hero p.hero-subtitle {
   font-size: 1.25rem;
-  color: var(--color-text-muted);
+  color: #fff;
   margin-bottom: 3rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.6;
-  max-width: 90%;
+  max-width: 80%;
+  text-shadow: 0 5px 15px rgba(0,0,0,0.8);
 }
 
-.hero-actions {
+.hero-actions.center {
   display: flex;
   gap: 1.5rem;
-  justify-content: flex-start;
-}
-
-.hero-image-container {
-  position: relative;
-  height: 600px;
-  border-radius: 24px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-  background: linear-gradient(135deg, rgba(245, 185, 39, 0.15), rgba(220, 38, 38, 0.1));
-}
-
-.hero-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 24px;
-}
-
-.hero-image-wrapper-relative {
-  position: relative;
-  z-index: 5;
-}
-
-.floating-stat {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 1.5rem;
-  border-radius: 16px;
-  background: rgba(10, 15, 26, 0.6);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-  animation: float 6s ease-in-out infinite;
-  z-index: 20;
-}
-
-.floating-stat.card-1 {
-  top: 10%;
-  left: -15%;
-  animation-delay: 0s;
-}
-
-.floating-stat.card-2 {
-  bottom: 15%;
-  right: -10%;
-  animation-delay: 3s;
-}
-
-.stat-icon {
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
   justify-content: center;
-}
-.stat-icon.glow-gold { text-shadow: 0 0 15px rgba(245, 185, 39, 0.8); }
-.stat-icon.glow-red { text-shadow: 0 0 15px rgba(220, 38, 38, 0.8); }
-
-.stat-info {
-  display: flex;
-  flex-direction: column;
-}
-.stat-info strong {
-  font-size: 1.1rem;
-  color: #fff;
-  letter-spacing: 1px;
-}
-.stat-info span {
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-  text-transform: uppercase;
 }
 
 /* Sections Global */
@@ -617,7 +554,7 @@ section {
 .achievements-gallery img {
   width: 100%;
   height: 300px;
-  object-fit: contain;
+  object-fit: cover;
   background: linear-gradient(135deg, rgba(220, 38, 38, 0.05) 0%, rgba(245, 185, 39, 0.1) 100%);
   border-radius: 12px;
   transition: var(--transition);
@@ -1294,8 +1231,9 @@ footer {
   .floating-stat.card-1 { left: 0; top: 5%; }
   .floating-stat.card-2 { right: 0; bottom: 5%; }
   .about-image-wrapper img, .females-image-wrapper { height: 500px; }
-  .masonry-gallery { column-count: 2; }
+  .masonry-gallery { column-count: 2; column-fill: balance; }
   .achievements-gallery { grid-template-columns: repeat(2, 1fr); }
+  .achievements-gallery .gallery-item:nth-child(3) { grid-column: 1 / -1; }
   .map-wrapper { height: 450px; }
 }
 
@@ -1328,18 +1266,11 @@ footer {
   .navbar nav a { font-size: 1.5rem; }
   
   /* Hero fixes */
-  .hero { padding-top: 100px; min-height: auto; padding-bottom: 3rem; }
-  .hero-grid { gap: 2rem; }
-  .hero h1 { font-size: 2.8rem; }
-  .hero p.hero-subtitle { font-size: 1.1rem; margin-bottom: 2rem; }
-  .hero-actions { flex-direction: column; }
+  .hero { padding-top: 80px; min-height: 100vh; padding-bottom: 2rem; }
+  .hero h1 { font-size: 2.8rem; margin-top: 1rem; }
+  .hero p.hero-subtitle { font-size: 1.1rem; margin-bottom: 2rem; max-width: 100%; }
+  .hero-actions.center { flex-direction: column; width: 100%; }
   .hero-actions .btn { width: 100%; }
-  .hero-image-container { height: 400px; }
-  .floating-stat.card-1 { left: -5%; }
-  .floating-stat.card-2 { right: -5%; }
-  .stat-info strong { font-size: 0.9rem; }
-  .stat-info span { font-size: 0.7rem; }
-  .stat-icon { font-size: 1.4rem; }
 
   /* Section padding */
   section { padding: 4rem 0; }
@@ -1353,6 +1284,8 @@ footer {
   .achievement-featured { height: 400px; }
   .achievements-gallery img { height: 250px; }
   .females-image-wrapper { height: 400px; }
+  
+  .masonry-gallery { column-count: 1; }
 
   /* Footer & Grids */
   .footer-content { flex-direction: column; text-align: center; gap: 2rem; }
@@ -1370,14 +1303,11 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .masonry-gallery { column-count: 1; }
   .achievements-gallery { grid-template-columns: 1fr; }
+  .achievements-gallery .gallery-item:nth-child(3) { grid-column: auto; }
   .hero h1 { font-size: 2.3rem; }
   .nav-cta { padding: 0.5rem 1rem; font-size: 0.8rem; }
   .action-row { grid-template-columns: 1fr; }
-  .hero-image-container { height: 300px; }
-  .floating-stat.card-1 { left: -5%; top: 2%; }
-  .floating-stat.card-2 { right: -5%; bottom: 2%; }
   .kids-img-main { height: 250px; }
   .achievement-featured { height: 300px; }
   .females-image-wrapper { height: 300px; }
